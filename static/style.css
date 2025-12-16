@@ -48,7 +48,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
     display: flex;
@@ -175,7 +175,7 @@ body {
 }
 
 .container {
-    max-width: 1125px;
+    max-width: 956px;
     margin: 0 auto;
 }
 
@@ -221,7 +221,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    max-width: 1400px;
+    max-width: 1190px;
     margin: 0 auto;
 }
 
@@ -681,12 +681,12 @@ body {
     font-size: 1.3rem;
     color: var(--text-light);
     line-height: 1.8;
-    max-width: 880px;
+    max-width: 680px;
     margin: 0 auto;
 }
 
 .blog-post-content {
-    max-width: 990px;
+    max-width: 765px;
     margin: 0 auto 3rem;
     font-size: 1.15rem;
     line-height: 1.9;
@@ -812,7 +812,7 @@ body {
 }
 
 .blog-post-footer {
-    max-width: 990px;
+    max-width: 765px;
     margin: 0 auto;
     padding-top: 2rem;
     border-top: 2px solid var(--border-color);
