@@ -151,14 +151,14 @@ body {
 }
 
 .hero-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--text-light);
     line-height: 1.6;
     white-space: normal;
@@ -180,7 +180,7 @@ body {
 }
 
 .about h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
@@ -194,7 +194,7 @@ body {
 }
 
 .about-content p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--text-light);
     line-height: 1.9;
     text-align: justify;
@@ -210,7 +210,7 @@ body {
 }
 
 .projects h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 3rem;
@@ -326,7 +326,7 @@ body {
 }
 
 .project-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
@@ -381,7 +381,7 @@ body {
 }
 
 .publications h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 3rem;
@@ -447,7 +447,7 @@ body {
 }
 
 .publication-title {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.8rem;
@@ -455,13 +455,13 @@ body {
 }
 
 .publication-authors {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--text-light);
     margin-bottom: 0.5rem;
 }
 
 .publication-venue {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     color: var(--text-light);
     margin-bottom: 1.5rem;
     font-style: italic;
@@ -585,7 +585,7 @@ body {
 }
 
 .blog-section h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 3rem;
@@ -611,7 +611,7 @@ body {
 }
 
 .blog-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -664,7 +664,7 @@ body {
 }
 
 .blog-post-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -678,7 +678,7 @@ body {
 }
 
 .blog-post-description {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--text-light);
     line-height: 1.8;
     max-width: 680px;
@@ -688,13 +688,13 @@ body {
 .blog-post-content {
     max-width: 765px;
     margin: 0 auto 3rem;
-    font-size: 1.15rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.8;
     color: var(--text-dark);
 }
 
 .blog-post-content h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-top: 2.5rem;
@@ -703,7 +703,7 @@ body {
 }
 
 .blog-post-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-top: 2rem;
