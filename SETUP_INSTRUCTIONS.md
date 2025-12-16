@@ -10,7 +10,7 @@ Edit `config.toml` and update these values:
 [extra]
 name = "Your Name"                                    # Your full name
 email = "your.email@example.com"                      # Your email address
-github = "https://github.com/asphytheghoul"           # Your GitHub profile URL
+github = "https://github.com/akash-kamalesh"           # Your GitHub profile URL
 linkedin = "https://linkedin.com/in/yourprofile"      # Your LinkedIn profile URL
 resume_url = "https://drive.google.com/file/d/YOUR_RESUME_ID/view"  # Your resume link
 ```
