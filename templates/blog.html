@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - {{ config.extra.name }}{% endblock %}
+
+{% block content %}
+    <section class="blog-section">
+        <div class="container">
+            <h1>Blog</h1>
+            <div class="blog-list">
+                {% if section.pages %}
+                    {% for page in section.pages %}
+                        <article class="blog-card">
+                            <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+                            <p class="blog-date">{{ page.date }}</p>
+                            <p class="blog-excerpt">{{ page.description }}</p>
+                            <a href="{{ page.permalink }}" class="read-more">Read More →</a>
+                        </article>
+                    {% endfor %}
+                {% else %}
+                    <p>No blog posts yet. Check back soon!</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

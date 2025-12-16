@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - Blog{% endblock %}
+
+{% block content %}
+    <article class="blog-post">
+        <div class="container">
+            <header class="blog-post-header">
+                <h1 class="blog-post-title">{{ page.title }}</h1>
+                <p class="blog-post-date"><strong>{{ page.date }}</strong></p>
+                {% if page.description %}
+                    <p class="blog-post-description">{{ page.description }}</p>
+                {% endif %}
+            </header>
+            <div class="blog-post-content">
+                {{ page.content | safe }}
+            </div>
+            <footer class="blog-post-footer">
+                <a href="{{ get_url(path='@/blog/_index.md') }}" class="back-to-blog">← Back to Blog</a>
+            </footer>
+        </div>
+    </article>
+{% endblock %}
