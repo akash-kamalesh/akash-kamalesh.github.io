@@ -94,11 +94,9 @@ Getting started is simple:
 
 ```bash
 # Clone the repository
-git clone https://github.com/akash-kamalesh/nanovlm-lab
-cd nanovlm-lab
-
-# Clone nanoVLM
-git clone https://github.com/huggingface/nanoVLM.git
+git clone https://github.com/huggingface/nanoVLM.git && \
+mv nanoVLM/ RL-VLM-Lab/nanovlm && \
+mv RL-VLM-Lab/rlvlm/datasets.py RL-VLM-Lab/rlvlm/collators.py RL-VLM-Lab/nanovlm/data/
 
 # Install dependencies
 pip install -e .
