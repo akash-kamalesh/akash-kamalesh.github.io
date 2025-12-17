@@ -7,7 +7,7 @@ description = "Exploring methods to build scalable and efficient vision-language
 
 ## Introduction
 
-A few months ago, I was an undergraduate student working on a research project to improve dual encoder models like CLIP, with a specific focus on visual reasoning capabilities. It was exciting work-the kind that makes you believe you're onto something extremely impressive. But there was a problem: I had ambition, but not resources.
+A few months ago, I was an undergraduate student working on a research project to improve dual encoder models like CLIP, with a specific focus on visual reasoning capabilities. It was exciting work-the kind that makes you believe you're onto something extremely impressive. But there was a problem I ran into very quickly - the infamous `OutOfMemoryError`. I could reduce it by dropping the batch size to 4, but then I'd have to explain to reviewers why my results came from training with such an unusually small batch size.
 
 Being an undergrad with limited funding, I quickly realized that experimenting with vision-language models on free-tier GPUs was a non-starter. The computational demands were simply too high. So I turned to cloud GPUs, hoping to unlock the ability to train and iterate on my ideas. But here's what I discovered: **the real bottleneck wasn't just the GPU itself-it was everything around it.**
 
@@ -21,9 +21,9 @@ NanoVLM-Lab is built for researchers, students, and practitioners who want to ex
 
 ---
 
-## The Problem: GPU Resources Shouldn't Gate Innovation
+## The Problem: Resources Shouldn't Stop Independent Research
 
-The current landscape of ML research has a significant barrier to entry: **computational resources**. Training large vision-language models like Qwen-VL or Gemini requires multiple high-end GPUs, making it inaccessible to most researchers and practitioners.
+The current landscape of ML research has a significant barrier to entry: **computational resources**. Training large vision-language models like Qwen-VL or Gemini requires multiple high-end GPUs, making it inaccessible to most researchers and practitioners from academia unless they are supplemented with a dedicated cluster or financial grant.
 
 But here's the thing: **you don't need a massive model to validate your ideas.**
 
@@ -73,13 +73,13 @@ Not everyone has access to a cluster of A100 GPUs. NanoVLM-Lab means that brilli
 
 ### 2. **Rapid Experimentation**
 With a single T4 GPU, you can now:
-- Train an SFT model in 2-4 hours
+- Train a prototypical SFT model in 2-4 hours
 - Run DPO experiments in 1-2 hours
 - Iterate on ideas in a single day
 
 This speed enables a different kind of research - one where you can test hypotheses quickly and build on results iteratively.
 
-### 3. **Production-Ready Tools**
+### 3. **Testing Hypotheses Quickly**
 NanoVLM-Lab isn't just research code. It's built with production in mind:
 - YAML-based configuration (no code changes needed)
 - Comprehensive documentation
@@ -124,11 +124,13 @@ That's it. No complex setup, no mysterious hyperparameters. Just clear configura
 
 ## The Bigger Picture
 
-NanoVLM-Lab is more than a training framework. It's a statement: **efficiency matters, and small models deserve the same attention and tooling as large ones.**
+NanoVLM-Lab is more than a training framework—it's a belief that **efficiency matters, and small models deserve the same attention and tooling as large ones.**
 
-I believe the next wave of ML innovation won't come from scaling up, but from getting smarter about how we train and deploy models. It will come from researchers who can iterate quickly on limited hardware. It will come from practitioners who need to deploy models on edge devices. It will come from the community that believes in building practical, accessible AI.
+The next wave of ML innovation won't come from scaling up, but from getting smarter about how we train and deploy models. This is where researchers with limited hardware can iterate quickly, where practitioners can build for edge devices, and where the community can focus on practical, accessible AI.
 
-If you're one of those people, NanoVLM-Lab is for you.
+Of course, frameworks like Unsloth and LLaMA Factory are excellent alternatives with their own strengths. But NanoVLM-Lab is specifically designed to explore how far we can push small-scale models—to understand their true potential and build a community around efficient, accessible training.
+
+If that resonates with you, NanoVLM-Lab is built for you.
 
 ---
 
@@ -148,7 +150,7 @@ NanoVLM-Lab is open-source and actively developed. Whether you want to:
 
 ---
 
-## Citation
+<!-- ## Citation
 
 If NanoVLM-Lab helps your research, please consider citing it:
 
@@ -159,7 +161,7 @@ If NanoVLM-Lab helps your research, please consider citing it:
   year={2025},
   url={https://github.com/akash-kamalesh/nanovlm-lab}
 }
-```
+``` -->
 
 ---
 
@@ -173,7 +175,7 @@ This is just the beginning, and I'm actively listening to user feedback to shape
 
 A few years ago, I was frustrated by the limitations of my hardware. Today, I'm excited about what's possible when you focus on efficiency and smart design. NanoVLM-Lab is my contribution to changing how we think about model training.
 
-I hope it helps you validate your ideas, accelerate your research, and build amazing things - all without needing a supercomputer.
+I hope this project helps you validate your ideas, accelerate your research, and would love to see this project contribute to bigger more amazing developments.
 
 **- Akash Kamalesh**
 
