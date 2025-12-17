@@ -162,8 +162,8 @@ If NanoVLM-Lab helps your research, please consider citing it:
   url={https://github.com/akash-kamalesh/nanovlm-lab}
 }
 ``` -->
-
----
+<!-- 
+--- -->
 
 ## What's Next?
 
