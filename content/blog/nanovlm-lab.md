@@ -99,7 +99,7 @@ mv nanoVLM/ nanovlm-lab/nanovlm && \
 mv nanovlm-lab/rlvlm/datasets.py nanovlm-lab/rlvlm/collators.py nanovlm-lab/nanovlm/data/
 
 # Install dependencies
-pip install transformers datasets==4.4.1 gcsfs huggingface_hub trl peft accelerate -qqq
+pip install transformers datasets==4.4.1 gcsfs huggingface_hub trl matplotlib einops peft accelerate -qqq
 
 # Run training
 python rlvlm/main.py --config configs/sft_config.yaml
