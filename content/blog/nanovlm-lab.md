@@ -122,7 +122,7 @@ That's it. No complex setup, no mysterious hyperparameters. Just clear configura
 
 ## The Bigger Picture
 
-My research interest lies in building smaller and better performing foundation models. This is my second venture in building an open-source framework and I hope this project is of use to researchers who garner the same opinion where **efficiency matters, and small models deserve the same attention and tooling as large ones.**
+My research interest lies in building smaller and better performing foundation models. This is my second venture in building an open-source framework and I hope this project is of use to researchers who share the same opinion where **efficiency matters, and small models deserve the same attention and tooling as large ones.**
 
 Of course, frameworks like Unsloth and LLaMA Factory are excellent alternatives with their own strengths but they lack the ease of use and accessibility that NanoVLM-Lab offers. NanoVLM-Lab is specifically designed to explore how far we can push small-scale models—to understand their true potential and build a community around efficient, accessible training.
 
