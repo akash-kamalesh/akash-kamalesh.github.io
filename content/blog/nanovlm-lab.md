@@ -55,8 +55,8 @@ Here's an example of how DPO preference tuning transforms nanoVLM's outputs:
 |-------|--------|---------------------------|------------------------------|
 | ![Cake](/cake.jpg) | "Why are cakes usually eaten at party's?" | "birthday" | "Cakes are usually eaten at parties to celebrate and to commemorate special occasions, such as birthdays, anniversaries, or holidays. The festive atmosphere and shared enjoyment create the ideal setting for cakes to be a highlight of the event." |
 
-*Using the checkpoint: lusxvr/nanoVLM-230M-8k
-**After short training on a subset of the dataset using DPO preference optimization.<br>
+*Using the checkpoint: lusxvr/nanoVLM-230M-8k.<br>
+**After short training on a subset of the dataset using DPO preference optimization.
 
 **What's happening here?**
 
