@@ -853,14 +853,15 @@ body {
 
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        justify-content: space-between;
     }
 
     .nav-menu {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        justify-content: flex-end;
+        gap: 0.75rem;
     }
 
     .hero {
@@ -948,6 +949,10 @@ body {
 @media (max-width: 480px) {
     .nav-logo {
         font-size: 1.25rem;
+    }
+
+    .nav-container {
+        padding: 0.8rem 1rem;
     }
 
     .nav-menu {
