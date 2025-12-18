@@ -179,4 +179,4 @@ I hope this project helps you validate your ideas, accelerate your research, and
 
 ---
 
-*Have questions? Found a bug? Want to contribute? Open an issue or pull request on [GitHub](https://github.com/akash-kamalesh/nanovlm-lab). Let's build this together.*
+*Have questions? Found a bug? Want to contribute? Open an issue or pull request on [GitHub](https://github.com/akash-kamalesh/nanovlm-lab).*
