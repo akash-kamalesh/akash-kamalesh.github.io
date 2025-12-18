@@ -140,7 +140,7 @@ NanoVLM-Lab is open-source and actively developed. Whether you want to:
 
 **Check it out on GitHub**: [akash-kamalesh/nanovlm-lab](https://github.com/akash-kamalesh/nanovlm-lab)
 
-**Read the docs**: Start with the [main README](README.md), then explore the [Configuration Guide](configs/README.md) and [Training Approaches](examples/README.md).
+**Read the docs**: Start with the [main README](https://github.com/akash-kamalesh/nanovlm-lab), then explore the [Configuration Guide](https://github.com/akash-kamalesh/nanovlm-lab/tree/master/configs) and [Training Approaches](https://github.com/akash-kamalesh/nanovlm-lab/tree/master/examples).
 
 ---
 
