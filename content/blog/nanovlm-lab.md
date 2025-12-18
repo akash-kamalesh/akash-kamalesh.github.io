@@ -7,23 +7,23 @@ description = "Exploring methods to build scalable and efficient vision-language
 
 ## Introduction
 
-A few months ago, I was an undergraduate student working on a research project to improve dual encoder models like CLIP, with a specific focus on visual reasoning capabilities. It was exciting work-the kind that makes you believe you're onto something extremely impressive. But there was a problem I ran into very quickly - the infamous `OutOfMemoryError`. I could reduce it by dropping the batch size to 4, but then I'd have to explain to reviewers why my results came from training with such an unusually small batch size.
+A few months ago, I was an undergraduate student working on a research project to improve dual encoder models like CLIP, with a specific focus on visual reasoning capabilities. It was exciting work-the kind that makes you believe you're onto something extremely impressive. But there was a problem I ran into very quickly- the infamous `OutOfMemoryError`. I could reduce it by dropping the batch size to 4, but then I'd have to explain to reviewers why my results came from training with such an unusually small batch size.
 
-Being an undergrad with limited funding, I quickly realized that experimenting with vision-language models on free-tier GPUs was a non-starter. The computational demands were simply too high. So I turned to cloud GPUs, hoping to unlock the ability to train and iterate on my ideas. But here's what I discovered: **the real bottleneck wasn't just the GPU itself-it was everything around it.**
+Being a self-funded undergrad student, I quickly realized that experimenting with competitive open-source vision-language models such as Qwen-2.5, Gemma 3 etc. on free-tier GPUs was a non-starter. The computational demands were simply too high and/or the experience of running inference on free-tier GPUs wasn't great. So, I turned to cloud GPUs, hoping to unlock the ability to train and iterate on my ideas. But here's what I discovered: **the real bottleneck wasn't just the GPU itself- it was everything that happened before the GPU was actually used.**
 
-Data preprocessing, validation, experiment tracking, checkpoint management-these tasks consumed enormous amounts of time. And during all that time, the GPU sat idle while I was debugging data pipelines or validating results. But the meter kept running. I was burning money on compute that wasn't actually being used for training. Hours would pass where a $0.50/hour GPU was costing me real money for work that could have been done on my laptop.
+Data preprocessing, validation, experiment tracking, checkpoint management-these tasks consumed enormous amounts of time. And during all that time, the GPU sat idle while I was debugging data pipelines or validating data. But the meter kept running. I realised I was spending money on compute that wasn't actually being used for training.
 
-In addition to compute, having spoken to researchers at NeurIPS last year, I noticed an increase in studies focused on efficient and more performative foundation models I wanted to create a project that would take care of the heavy lifting-all those tedious, time-consuming processes that eat up GPU hours and money without adding value. My goal was simple: abstract away the complexity with simple, helpful wrappers so that researchers and practitioners could focus on what actually matters: their ideas and their data.
+In addition to compute, having spoken to researchers at NeurIPS last year, I noticed an increase in studies focused on efficient and more performative foundation models. The narrative has shifted a lot towards producing smaller, more compact and performative models. I wanted to create a project that would take care of the heavy lifting-all those tedious, time-consuming processes that could eat up hours. My goal was simple: abstract away the complexity with simple, helpful wrappers so that researchers and practitioners could focus on what actually matters: their ideas and their data.
 
-The result is a comprehensive training framework, **NanoVLM-Lab** designed to make vision-language model training accessible to anyone with limited resources. All you need is a dataset and a use-case. Whether you're working with a single free-tier GPU, a modest cloud instance, or even just a laptop for prototyping, NanoVLM-Lab handles the infrastructure so you can focus on the research.
+One of the projects released as a result of this is a comprehensive training framework, **NanoVLM-Lab** designed to make vision-language model training accessible to anyone with limited resources. All you need is a dataset and a use-case. Whether you're working with a single free-tier GPU, a modest cloud instance, or even just a laptop for prototyping, NanoVLM-Lab is designed with a focus on supporting small VLMs so you can focus on the research.
 
-NanoVLM-Lab is built for researchers, students, and practitioners who want to experiment with vision-language models without breaking the bank. Whether you're validating ideas, exploring new approaches, or building proof-of-concepts, this framework gives you the tools to do it efficiently. Whether you're a student exploring machine learning, a researcher with a single GPU, or a practitioner building production systems, this framework is built for you.
+I built this project keeping in mind independent researchers, students, and practitioners who are experimenting with complex architecture modifications, validating hypotheses, exploring new approaches, or building proof-of-concepts. You can safely construct your solutions on a small model, test the relative performance improvements and then reliably adapt it to the larger models such as Qwen 2.5-VL. This way, you can demonstrate your methods work reliably at scale.
 
 ---
 
-## The Problem: Resources Shouldn't Stop Independent Research
+## The Problem: Ideas but A Lack of Resources 
 
-The current landscape of ML research has a significant barrier to entry: **computational resources**. Training large vision-language models like Qwen-VL or Gemini requires multiple high-end GPUs, making it inaccessible to most researchers and practitioners from academia unless they are supplemented with a dedicated cluster or financial grant.
+The current landscape of ML research has a significant barrier to entry: **computational resources**. Training large vision-language models requires multiple high-end GPUs, making it inaccessible to most small-scale researchers and practitioners from academia unless they are supplemented with a dedicated cluster or financial grant.
 
 But here's the thing: **you don't need a massive model to validate your ideas.**
 
@@ -47,9 +47,9 @@ But SFT is just the beginning. Once you have a solid foundation, you can go beyo
 
 ---
 
-## Real-World Example: The Power of DPO
+## Example: Preference-tuning with DPO
 
-Let me show you what's possible with NanoVLM-Lab. Here's a concrete example of how DPO preference tuning transforms model outputs:
+Here's an example of how DPO preference tuning transforms nanoVLM's outputs:
 
 | Image | Prompt | Pre-trained nanoVLM Output* | DPO Preference-Tuned Output** |
 |-------|--------|---------------------------|------------------------------|
@@ -60,7 +60,7 @@ Let me show you what's possible with NanoVLM-Lab. Here's a concrete example of h
 
 **What's happening here?**
 
-The pre-trained model gives a one-word answer: "birthday." It's not wrong, but it's not very useful. After just a few hours of DPO training on a subset of the dataset, the same model produces a thoughtful, comprehensive answer that actually explains the reasoning.
+The pre-trained model gives a one-word answer: "birthday." It's not wrong, but it's not very useful. After just a few hours of DPO training on a subset of the dataset, the same model produces a thoughtful, aligned and comprehensive answer that actually explains the reasoning.
 
 This is the magic of preference optimization: **you're not just teaching the model facts, you're teaching it how to think and communicate.**
 
@@ -72,7 +72,7 @@ This is the magic of preference optimization: **you're not just teaching the mod
 Not everyone has access to a cluster of A100 GPUs. NanoVLM-Lab means that brilliant ideas from researchers with limited resources can now be validated and explored.
 
 ### 2. **Rapid Experimentation**
-With a single T4 GPU, you can now:
+With consumer GPUs, you can now:
 - Train a prototypical SFT model in 2-4 hours
 - Run DPO experiments in 1-2 hours
 - Iterate on ideas in a single day
@@ -80,7 +80,7 @@ With a single T4 GPU, you can now:
 This speed enables a different kind of research - one where you can test hypotheses quickly and build on results iteratively.
 
 ### 3. **Testing Hypotheses Quickly**
-NanoVLM-Lab isn't just research code. It's built with production in mind:
+NanoVLM-Lab is designed to test and implement quickly:
 - YAML-based configuration (no code changes needed)
 - Comprehensive documentation
 - Example notebooks for every training approach
@@ -122,13 +122,9 @@ That's it. No complex setup, no mysterious hyperparameters. Just clear configura
 
 ## The Bigger Picture
 
-NanoVLM-Lab is more than a training framework—it's a belief that **efficiency matters, and small models deserve the same attention and tooling as large ones.**
+My research interest lies in building smaller and better performing foundation models. This is my second venture in building an open-source framework and I hope this project is of use to researchers who garner the same opinion where **efficiency matters, and small models deserve the same attention and tooling as large ones.**
 
-The next wave of ML innovation won't come from scaling up, but from getting smarter about how we train and deploy models. This is where researchers with limited hardware can iterate quickly, where practitioners can build for edge devices, and where the community can focus on practical, accessible AI.
-
-Of course, frameworks like Unsloth and LLaMA Factory are excellent alternatives with their own strengths. But NanoVLM-Lab is specifically designed to explore how far we can push small-scale models—to understand their true potential and build a community around efficient, accessible training.
-
-If that resonates with you, NanoVLM-Lab is built for you.
+Of course, frameworks like Unsloth and LLaMA Factory are excellent alternatives with their own strengths but they lack the ease of use and accessibility that NanoVLM-Lab offers. NanoVLM-Lab is specifically designed to explore how far we can push small-scale models—to understand their true potential and build a community around efficient, accessible training.
 
 ---
 
@@ -177,7 +173,7 @@ This is just the beginning, and I'm actively listening to user feedback to shape
 
 A few years ago, I was frustrated by the limitations of my hardware. Today, I'm excited about what's possible when you focus on efficiency and smart design. NanoVLM-Lab is my contribution to changing how we think about model training.
 
-I hope this project helps you validate your ideas, accelerate your research, and would love to see this project contribute to bigger more amazing developments.
+I hope this project helps you validate your ideas, accelerate your research, and would love to see this project contribute to bigger, more amazing developments using small VLMs.
 
 **- Akash Kamalesh**
 
