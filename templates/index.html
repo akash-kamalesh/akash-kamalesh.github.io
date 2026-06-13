@@ -134,6 +134,23 @@
                 <!-- Example Publication Card -->
                 <div class="publication-card">
                     <div class="publication-image">
+                        <img src="{{ get_url(path='scene_clip_preview.png') }}" alt="Publication thumbnail">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-badge">ECML-PKDD 2026</div>
+                        <h3 class="publication-title">Scene-CLIP: Enhancing Compositional Scene Understanding With Scene Graphs</h3>
+                        <p class="publication-authors">Akash Kamalesh, Tanistha Hota and Gowri Srinivasa</p>
+                        <p class="publication-venue"><em>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases Research Track (ECML-PKDD 2026)</em></p>
+                        <div class="publication-links">
+                            <button class="pub-btn abs-btn" onclick="openAbstract(event, 'abstractModal')">Abstract</button>
+                            <a href="https://openreview.net/pdf?id=n6W0QkQBgw" class="pub-btn" target="_blank">PDF</a>
+                            <a href="https://github.com/akash-kamalesh/Scene-CLIP" class="pub-btn" target="_blank">Project Page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-image">
                         <img src="{{ get_url(path='unolora_preview.png') }}" alt="Publication thumbnail">
                     </div>
                     <div class="publication-content">
@@ -142,7 +159,7 @@
                         <p class="publication-authors">Akash Kamalesh, Anirudh Lakhotia, H S Nischal, Prerana Sanjay Kulkarni, and Gowri Srinivasa</p>
                         <p class="publication-venue"><em>Workshop on Fine-Tuning in Machine Learning at NeurIPS, 2024</em></p>
                         <div class="publication-links">
-                            <button class="pub-btn abs-btn" onclick="openAbstract(event, 'abstractModal')">ABS</button>
+                            <button class="pub-btn abs-btn" onclick="openAbstract(event, 'abstractModal')">Abstract</button>
                             <a href="https://openreview.net/pdf?id=n6W0QkQBgw" class="pub-btn" target="_blank">PDF</a>
                             <a href="https://neurips.cc/media/PosterPDFs/NeurIPS 2024/101671.png?t=1740678205.5010693" class="pub-btn" target="_blank">POSTER</a>
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QUNjegoAAAAJ&citation_for_view=QUNjegoAAAAJ:u-x6o8ySG0sC" class="pub-btn" target="_blank">GOOGLE SCHOLAR</a>
@@ -160,7 +177,7 @@
                         <p class="publication-authors">Anirudh Lakhotia, Akash Kamalesh, H S Nischal, Prerana Sanjay Kulkarni, and Gowri Srinivasa</p>
                         <p class="publication-venue"><em>2025 15th International Conference on Electrical Engineering (ICEENG)</em></p>
                         <div class="publication-links">
-                            <button class="pub-btn abs-btn" onclick="openAbstract(event, 'abstract2Modal')">ABS</button>
+                            <button class="pub-btn abs-btn" onclick="openAbstract(event, 'abstract2Modal')">Abstract</button>
                             <a href="https://ieeexplore.ieee.org/abstract/document/11031295" class="pub-btn" target="_blank">PDF</a>
                             <!-- <a href="https://neurips.cc/media/PosterPDFs/NeurIPS 2024/101671.png?t=1740678205.5010693" class="pub-btn" target="_blank">POSTER</a> -->
                             <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QUNjegoAAAAJ&citation_for_view=QUNjegoAAAAJ:9yKSN-GCB0IC" class="pub-btn" target="_blank">GOOGLE SCHOLAR</a>
@@ -172,6 +189,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Abstract Modal 1 - Scene-CLIP -->
+    <div id="abstractModal" class="modal" onclick="closeAbstract(event, 'abstractModal')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeAbstract(null, 'abstractModal')">&times;</span>
+            <h2>Abstract</h2>
+            <p>
+                Large-scale vision-language models (VLMs) like CLIP excel in general image-text alignment but struggle with fine-grained compositional understanding, failing to correctly ground object attributes, relationships, and spatial configurations. Previous works incorporating scene graph knowledge (SGK) improve compositionality but rely on heavy external encoders or modifications to pretrained backbones, breaking end-to-end optimization in the vision-language embedding space. Recent works address this limitation through synthetic hard-negative sampling, improving compositional performance. Informed by this, we introduce Scene-CLIP, a lightweight, attention-based framework that enhances CLIP’s compositional reasoning through two key innovations: (1) a dual negative sampling strategy combining syntactic negatives (e.g., swapped object-relation pairs) with semantic hard negatives and (2) a parameter-efficient triple aggregator that processes scene graph triples directly within CLIP’s embedding space. Experiments show substantial improvements across multiple tasks, outperforming many state-of-the-art methods on SugarCrepe, SugarCrepe++, and Visual Genome benchmarks with an average 12% accuracy gain over CLIP and improving group retrieval scores on the VisMin benchmark by 16% relative to a fine-tuned CLIP baseline. Notably, Scene-CLIP surpasses strong recent baselines while using 28% fewer parameters than prior SGK-based approaches, illustrating that incorporating scene graphs with sophisticated negative sampling advances compositional reasoning in VLMs.
+            </p>
+        </div>
+    </div>
 
     <!-- Abstract Modal 1 - UnoLoRA -->
     <div id="abstractModal" class="modal" onclick="closeAbstract(event, 'abstractModal')">
